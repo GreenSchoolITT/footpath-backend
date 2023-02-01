@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/GreenSchoolITT/footpath-backend/issues"
   },
-  "homepage": "https://github.com/GreenSchoolITT/footpath-backend#readme"
+  "homepage": "https://github.com/GreenSchoolITT/footpath-backend#readme",
+  "dependencies": {
+    "typescript": "^4.9.5"
+  }
 }
