@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
-let port: number;
-port = 80;
+let port: number = 80;
 
 app.listen(port, () => {
   console.log(`My first Express.js web application listening at http://localhost:${port}`);
