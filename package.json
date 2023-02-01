@@ -1,0 +1,19 @@
+{
+  "name": "footpath-backend",
+  "version": "0.1.0",
+  "description": "Back End of Foot Path",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GreenSchoolITT/footpath-backend.git"
+  },
+  "author": "GreenSchoolITT",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/GreenSchoolITT/footpath-backend/issues"
+  },
+  "homepage": "https://github.com/GreenSchoolITT/footpath-backend#readme"
+}
