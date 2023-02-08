@@ -1,15 +1,32 @@
 const express = require('express');
-const app = express();
-let port: number = 80;
+const bodyParser = require('body-parser');
+const main = express();
+const port: number = 2000;
 
-app.listen(port, () => {
-  console.log(`My first Express.js web application listening at http://localhost:${port}`);
+main.use(bodyParser.json());
+main.use(bodyParser.urlencoded({ extended: false }));
+
+main.listen(port, () => {
+  console.log(`Server listening at http://localhost:${port}`);
 });
 
-app.get('/', (req, res) => {
-  res.sendFile("./html/index.html", {root: __dirname});
+main.get('/', (req, res) => {
+  res.sendFile('./pages/index.html', {root: __dirname});
 });
 
-app.get('/test', (req, res) => {
-  res.send('2');
+main.get("/ph", (req, res) => {
+  res.sendFile("./pages/ph.html", {root: __dirname});
+});
+
+main.get('/css/style.css', (req, res) => {
+  res.sendFile('./pages/css/style.css', {root: __dirname});
+});
+
+main.get('/js/script.js', (req, res) => {
+  res.sendFile('./pages/js/script.js', {root: __dirname});
+});
+
+main.post('/', (req, res) => {
+  console.log(req.body);
+  res.sendStatus(200);
 });
